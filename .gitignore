@@ -1,0 +1,30 @@
+# Media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mp3
+*.wav
+
+# Documents
+*.pdf
+*.pptx
+*.docx
+
+# Credentials
+.env
+*.key
+*.pem
+
+# Logs
+*.log
+
+# Node
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
