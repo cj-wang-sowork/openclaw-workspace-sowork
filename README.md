@@ -1,24 +1,28 @@
 # openclaw-workspace-sowork
 
-> A production-ready workspace template for running [OpenClaw](https://github.com/openclaw/openclaw) agents on a VM — with real-world skills for marketing, research, and content.
-
-Built and battle-tested by [SoWork](https://sowork.ai) across 13 markets. Open-sourced for the OpenClaw community.
+> **The only OpenClaw workspace built for marketing teams — with real production numbers.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenClaw](https://img.shields.io/badge/Built%20for-OpenClaw-orange)](https://github.com/openclaw/openclaw)
 [![SoWork](https://img.shields.io/badge/by-SoWork.ai-blue)](https://sowork.ai)
+[![DeepEval](https://img.shields.io/badge/DeepEval-0.940-brightgreen)](https://sowork.ai)
+
+**13 markets · $50/mo · DeepEval 0.940 · 3 agents on 1 VM**
+
+Built and battle-tested by [SoWork](https://sowork.ai). Open-sourced for the OpenClaw community.
 
 ---
 
 ## What is this?
 
-Most OpenClaw workspaces are empty scaffolding. This one has **actual content hyou can use immediately:**
+Most OpenClaw workspaces are empty scaffolding. This one has **actual content you can use immediately:**
 
 - ✅ **3 ready-to-use skills** — brand positioning, web research, content writing
-- ✅ **AGENTS.md + SOUL.md templates** — real boot sequences and 5 persona examples
+- ✅ **Complete workspace system** — AGENTS + SOUL + TOOLS + USER + IDENTITY + HEARTBEAT + MEMORY
 - ✅ **A complete marketing team example** — 3 agents running on 1 VM, with cost breakdown
 - ✅ **VM setup guide** — step-by-step from a $6/mo VPS to a running OpenClaw agent
 - ✅ **Brand-in-SOUL guide** — how to embed brand positioning into your agent's identity
+- ✅ **Security-gated MEMORY** — MEMORY.md never leaks to group chats or sub-agents
 
 Clone it. Customize it. Run it.
 
@@ -27,14 +31,11 @@ Clone it. Customize it. Run it.
 ## Quick Start
 
 ```bash
-# Clone to your VM's OpenClaw workspace directory
-git clone https://github.com/cj-wang-sowork/openclaw-workspace-sowork.git ~/.openclaw/workspace
+# Install via npx skills CLI
+npx skills add cj-wang-sowork/openclaw-workspace-sowork
 
-# Or clone and copy files manually
-git clone https://github.com/cj-wang-sowork/openclaw-workspace-sowork.git
-cp -r openclaw-workspace-sowork/skills ~/.openclaw/workspace/
-cp openclaw-workspace-sowork/AGENTS.md ~/.openclaw/workspace/
-cp openclaw-workspace-sowork/SOUL.md ~/.openclaw/workspace/
+# Or clone directly to your OpenClaw workspace
+git clone https://github.com/cj-wang-sowork/openclaw-workspace-sowork.git ~/.openclaw/workspace
 ```
 
 Then start OpenClaw:
@@ -46,6 +47,21 @@ openclaw gateway --port 18789
 
 ---
 
+## Production Numbers
+
+This template is extracted from real operations at SoWork — not a toy example:
+
+| Metric | Value |
+|--------|-------|
+| Markets served | 13 simultaneously |
+| Infrastructure cost | ~$50/month |
+| Agents on 1 VM | 3 (brand, research, content) |
+| DeepEval brand consistency | **0.940** |
+| Token efficiency | Full bootstrap under 150k chars |
+| VM minimum spec | $6/mo VPS |
+
+---
+
 ## What's Included
 
 ### Skills (drop into `~/.openclaw/workspace/skills/`)
@@ -54,3 +70,93 @@ openclaw gateway --port 18789
 |-------|-------------|---------|
 | `skills/brand-positioning.md` | Brand analysis + campaign strategy | `@assistant Run brand positioning for [Brand]` |
 | `skills/web-research.md` | Market research + competitor analysis | `@assistant Research [topic]` |
+| `skills/content-writer.md` | Brand-aligned content for any platform | `@assistant Write [content type] for [platform]` |
+
+### Workspace Files (drop into `~/.openclaw/workspace/`)
+
+| File | Purpose | Loaded When |
+|------|---------|------------|
+| `AGENTS.md` | Boot sequence, routing rules, checklist table | Every turn |
+| `SOUL.md` | Persona, tone, Brand-in-SOUL methodology | Every turn |
+| `TOOLS.md` | SSH hosts, API config, TTS voices, environment | Every turn |
+| `USER.md` | Team profile, preferences | Main sessions only |
+| `IDENTITY.md` | Name, emoji, avatar, self-description | Every turn |
+| `HEARTBEAT.md` | Periodic health tasks, content pipeline checks | Heartbeat turns |
+| `MEMORY.md` | Iron-law rules, hard-won learnings | Main sessions only (security-gated) |
+
+### Examples & Docs
+
+| Path | What it contains |
+|------|-----------------|
+| `examples/marketing-team/` | 3-agent team setup with full cost breakdown |
+| `docs/workspace-deep-dive.md` | Token optimization, security gates, file design guide |
+| `scripts/` | VM bootstrap and agent startup scripts |
+
+---
+
+## Directory Structure
+
+```
+~/.openclaw/workspace/          ← clone here
+├── AGENTS.md                   # Boot sequence + routing rules
+├── SOUL.md                     # Persona + Brand-in-SOUL
+├── TOOLS.md                    # Environment config (SSH, TTS, APIs)
+├── USER.md                     # Team context (main sessions only)
+├── IDENTITY.md                 # Name, emoji, avatar
+├── HEARTBEAT.md                # Periodic tasks
+├── MEMORY.md                   # Iron-law rules (security-gated)
+├── SKILL.md                    # Skills registry entry point
+├── skills/
+│   ├── brand-positioning.md
+│   ├── web-research.md
+│   └── content-writer.md
+├── memory/                     # Daily session logs
+├── examples/
+│   └── marketing-team/         # 3-agent team example
+├── docs/
+│   └── workspace-deep-dive.md  # Deep-dive guide
+├── scripts/                    # VM setup scripts
+└── outputs/                    # Agent output storage
+```
+
+---
+
+## The Brand-in-SOUL Concept
+
+Unlike generic workspace templates, this repo introduces **Brand-in-SOUL**: embedding your brand's positioning, tone, and values directly into the agent's `SOUL.md` — so every output is brand-consistent without prompt engineering on every message.
+
+Result: **DeepEval brand consistency score of 0.940** across 13 different markets.
+
+---
+
+## Security
+
+- `MEMORY.md` is **never loaded** in group chats or sub-agent sessions
+- Boot sequence in `AGENTS.md` explicitly gates: *"Main session only: Read MEMORY.md"*
+- All workspace files are plain Markdown — no executable code, no external calls
+
+---
+
+## Install via Skills CLI
+
+```bash
+npx skills add cj-wang-sowork/openclaw-workspace-sowork
+```
+
+Requires: [Node.js](https://nodejs.org) + [skills CLI](https://github.com/VoltAgent/awesome-openclaw-skills)
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). PRs welcome for new skills, workspace templates, and examples.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE)
+
+---
+
+*Built by [CJ Wang](https://sowork.ai) · Founder @ SoWork.ai · AI × Marketing × Open Source*
