@@ -28,3 +28,45 @@ dist/
 __pycache__/
 *.pyc
 .venv/
+
+
+# Agent-Specific
+memory/**/conversations/
+memory/**/raw_logs/
+*.token
+.env.*.local
+*.secret
+config/api-keys/
+
+# Learning System
+learn/**/*session*.md
+learn/**/*.tmp
+learn/**/access_logs/
+
+# Five-Layer Learning - Access Control
+learn/personal/
+learn/personal/**
+learn/**/*@private*
+learn/**/*private*
+
+# Sensitive Workspace Data
+outputs/**/sensitive/
+outputs/**/*private*.json
+workspace_backup/
+*.backup
+
+# Security & Compliance
+security_audit/
+penetration_test_results/
+vulnerability_reports/
+
+# IDE & Editor
+.vscode/settings.workspace.json
+.idea/workspace.xml
+*.swp
+*.swo
+
+# OS Specific
+.DS_Store
+Thumbs.db
+.trash/
