@@ -14,46 +14,46 @@
 > Most enterprise AI systems fail because they treat learning as monolithic. ATLAS solves this through **five-layer intelligence**:
 >
 > ```
-> 🏢 Enterprise Layer  → Organization-wide patterns
-> 🎯 Brand Layer       → Brand identity & positioning
-> 🏗️ Department Layer  → Team strategies & tactics
-> 👥 Team Layer        → Collaborative learning
-> 👤 Personal Layer    → Individual optimization (never exposed)
+> Enterprise Layer  -> Organization-wide patterns
+> Brand Layer       -> Brand identity & positioning
+> Department Layer  -> Team strategies & tactics
+> Team Layer        -> Collaborative learning
+> Personal Layer    -> Individual optimization (never exposed)
 > ```
 >
 > Each layer has complete isolation, access controls, and security enforcement. Your data stays yours.
 >
 > ## Core Features
 >
-> ### 🧠 AI Self-Learning (Hermes-Inspired)
+> ### AI Self-Learning (Hermes-Inspired)
 > - **Pattern Recognition**: Learns from market interactions, access patterns, and violations
 > - - **Confidence Scoring**: Tracks pattern confidence (0-1 scale) with automatic refinement
 >   - - **Adaptive Rules**: Auto-generates security and access rules from learned patterns
 >     - - **4 Learning Modes**: Observation → Adaptation → Optimization → Emergency
 >       - - **Persistent Intelligence**: Export/import learned patterns across systems
 >        
->         - ### 🔐 Enterprise Security
+>         - ### Enterprise Security
 >         - - **5-Level Access Control**: Personal → Team → Department → Brand → Enterprise
 >           - - **Real-Time Monitoring**: Credential & PII detection with violation logging
 >             - - **Market Isolation**: Complete data separation across unlimited markets
 >               - - **Personal File Protection**: Automatic `.gitignore` enforcement—personal learnings never leak
 >                 - - **Audit Trails**: Full violation history with JSON export for compliance
 >                  
->                   - ### 🌍 Unlimited Market Support
+>                   - ### Unlimited Market Support
 >                   - - **Market-Agnostic**: No hardcoded limits—works with any market, language, or region
 >                     - - **Dynamic Routing**: MarketRouter manages infinite markets with zero configuration
 >                       - - **Market Intelligence**: Cross-market threat detection and performance benchmarking
 >                         - - **Anomaly Detection**: Statistical outlier detection across all markets
 >                           - - **Best-Practice Sharing**: Recommendations based on top-performing markets
 >                            
->                             - ### 📊 Enterprise Intelligence
+>                             - ### Enterprise Intelligence
 >                             - - **Cross-Market Insights**: Aggregate learning across all markets automatically
 >                               - - **Performance Benchmarking**: Identify optimization opportunities and laggards
 >                                 - - **Threat Detection**: Detect security threats affecting multiple markets
 >                                   - - **Learning Level Analysis**: Performance tracking across all five layers
 >                                     - - **System Health Reports**: Comprehensive JSON-exportable intelligence reports
 >                                      
->                                       - ### ⚡ Production Ready
+>                                       - ### Production Ready
 >                                       - - **Zero Dependencies**: Pure Python stdlib—no pip bloat, zero supply chain risk
 >                                         - - **1,500+ Lines**: Fully type-hinted, documented, battle-tested code
 >                                           - - **5 Core Modules**: learn_system, market_router, security_checker, hermes_adapter, market_intelligence
@@ -127,17 +127,17 @@
 >
 > ```
 > User Action
->     ↓
-> [MarketRouter] → Market validation & context
->     ↓
-> [SecurityChecker] → Access control & violation detection
->     ↓
-> [LearnSystem] → Five-layer learning enforcement
->     ↓
-> [HermesAdapter] → Pattern learning & rule generation
->     ↓
-> [MarketIntelligence] → Cross-market insights & optimization
->     ↓
+>     |
+> [MarketRouter] -> Market validation & context
+>     |
+> [SecurityChecker] -> Access control & violation detection
+>     |
+> [LearnSystem] -> Five-layer learning enforcement
+>     |
+> [HermesAdapter] -> Pattern learning & rule generation
+>     |
+> [MarketIntelligence] -> Cross-market insights & optimization
+>     |
 > Action Result + Audit Log
 > ```
 >
@@ -190,12 +190,12 @@
 >     ))
 >
 > # ATLAS automatically:
-> # ✅ Isolates data per market
-> # ✅ Learns best practices per market
-> # ✅ Detects cross-market threats
-> # ✅ Recommends optimizations
-> # ✅ Prevents PII leakage
-> # ✅ Enforces security policies
+> # - Isolates data per market
+> # - Learns best practices per market
+> # - Detects cross-market threats
+> # - Recommends optimizations
+> # - Prevents PII leakage
+> # - Enforces security policies
 > ```
 >
 > The same system works for 5, 50, or 5000 markets—ATLAS scales infinitely.
@@ -204,12 +204,12 @@
 >
 > ### Built-In Protections
 >
-> - 🔒 **GDPR Ready**: Data isolation per market prevents PII leakage
-> - - 🔐 **SOC2 Ready**: Complete audit trails, violation logging, access control
->   - - 🛡️ **Zero Trust**: All access requires explicit validation
->     - - 📋 **Audit Trails**: Full JSON logs of all violations and access
->       - - 🚫 **Credential Detection**: API keys, passwords, tokens automatically flagged
->         - - 🆔 **PII Detection**: SSN, phone numbers, emails automatically blocked
+> - **GDPR Ready**: Data isolation per market prevents PII leakage
+> - - **SOC2 Ready**: Complete audit trails, violation logging, access control
+>   - - **Zero Trust**: All access requires explicit validation
+>     - - **Audit Trails**: Full JSON logs of all violations and access
+>       - - **Credential Detection**: API keys, passwords, tokens automatically flagged
+>         - - **PII Detection**: SSN, phone numbers, emails automatically blocked
 >          
 >           - See [SECURITY.md](SECURITY.md) for complete security policy and vulnerability disclosure process.
 >          
@@ -282,7 +282,7 @@
 >
 > - [ ] ## Built By
 >
-> - [ ] **CJ Wang** — Founder @ [SoWork.ai](https://sowork.ai) | AI × Marketing × Open Source
+> - [ ] **CJ Wang** — Founder @ [SoWork.ai](https://sowork.ai) | AI x Marketing x Open Source
 >
 > - [ ] ATLAS is open-sourced to empower every organization with enterprise-grade AI learning.
 >
